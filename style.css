@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F4EEE7;
+  color: #361319;
+  transition: all 0.3s ease;
+
+  /* Makes room for sidebar */
+  padding-left: 220px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100vh;
+  background: #361319;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo {
+  color: #C6B39A;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.nav-links a {
+  color: #F4EEE7;
+  text-decoration: none;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #C6B39A;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 4px 0 #C6B39A;
+}
+
+#themeButton {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+/* ===== Buttons ===== */
+button {
+  background: #6D3A3C;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #7B694E;
+  transform: translateY(-2px);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #6D3A3C,
+    #361319
+  );
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 60px 30px;
+  text-align: center;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section h2 {
+  color: #6D3A3C;
+  margin-bottom: 30px;
+}
+
+/* ===== Cards ===== */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card,
+.project-card,
+.value-card {
+  background: #FFFFFF;
+  padding: 25px;
+  width: 220px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(54, 19, 25, 0.15);
+  transition: all 0.35s ease;
+  border-top: 5px solid #C6B39A;
+}
+
+/* Hover Animation */
+.card:hover,
+.project-card:hover,
+.value-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(54, 19, 25, 0.3);
+}
+
+/* ===== Value Cards ===== */
+.value-card h3 {
+  color: #6D3A3C;
+}
+
+.value-card:nth-child(odd) {
+  border-top-color: #7B694E;
+}
+
+.value-card:nth-child(even) {
+  border-top-color: #6D3A3C;
+}
+
+/* ===== Project Links ===== */
+.project-card a {
+  color: #6D3A3C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  color: #7B694E;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  background: #361319;
+  color: #C6B39A;
+  padding: 20px;
+}
+
+/* ===== Dark Mode ===== */
+.dark {
+  background-color: #280B0F;
+  color: #E7D9C9;
+}
+
+/* Navbar */
+.dark .navbar {
+  background: #1A0609;
+}
+
+.dark .logo {
+  color: #C6B39A;
+}
+
+.dark .nav-links a {
+  color: #E7D9C9;
+}
+
+.dark .nav-links a:hover {
+  color: #C6B39A;
+}
+
+/* Hero */
+.dark .hero {
+  background: linear-gradient(
+    135deg,
+    #361319,
+    #280B0F
+  );
+}
+
+/* Headings */
+.dark .section h2 {
+  color: #C6B39A;
+}
+
+/* Cards */
+.dark .card,
+.dark .project-card,
+.dark .value-card {
+  background: #361319;
+  color: #F4EEE7;
+  border-top: 5px solid #C6B39A;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.dark .card:hover,
+.dark .project-card:hover,
+.dark .value-card:hover {
+  background: #4A1F25;
+}
+
+/* Links */
+.dark .project-card a {
+  color: #C6B39A;
+}
+
+.dark .project-card a:hover {
+  color: white;
+}
+
+/* Buttons */
+.dark button {
+  background: #7B694E;
+}
+
+.dark button:hover {
+  background: #C6B39A;
+  color: #280B0F;
+}
+
+/* Footer */
+.dark .footer {
+  background: #1A0609;
+  color: #C6B39A;
+}
+
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding-left: 0;
+    padding-top: 80px;
+  }
+
+  #themeButton {
+    margin: 0;
+  }
+
+  .hero,
+  .section {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+/* ===== Theme Toggle (ICON ONLY) ===== */
+
+.theme-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #C6B39A;
+
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.2);
+}
+
+.theme-button.rotate {
+  transform: rotate(180deg);
+}
+
+.theme-label {
+  font-size: 0.75rem;
+  color: #E7D9C9;
+  margin-top: 6px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* =========================
+   STARS
+========================= */
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  z-index: -1;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.stars::before,
+.stars::after {
+  content: "";
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-image:
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px),
+    radial-gradient(circle, white 1px, transparent 1px);
+
+  background-size:
+    120px 120px,
+    180px 180px,
+    240px 240px;
+
+  animation: twinkle 4s infinite alternate;
+}
+
+.dark .stars {
+  opacity: 1;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ========================= CLOUDS (LIGHT MODE) ========================= */
+.clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* hide clouds in dark mode */
+.dark .clouds {
+  opacity: 0;
+}
+
+/* cloud shapes */
+.clouds::before,
+.clouds::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  width: 200px;
+  height: 60px;
+  top: 20%;
+  left: -250px;
+  box-shadow:
+    120px 30px 0 rgba(255, 255, 255, 0.8),
+    240px 10px 0 rgba(255, 255, 255, 0.7),
+    360px 40px 0 rgba(255, 255, 255, 0.6);
+  animation: moveClouds 25s linear infinite;
+}
+
+/* second cloud layer */
+.clouds::after {
+  top: 60%;
+  width: 180px;
+  height: 50px;
+  animation-duration: 35s;
+  opacity: 0.7;
+}
+
+/* animation */
+@keyframes moveClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(140vw);
+  }
+}
+
+/* =========================
+   SMOOTH BACKGROUND CHANGE
+========================= */
+
+body {
+  transition:
+    background-color 0.8s ease,
+    color 0.8s ease;
+}
+
+.hero,
+.navbar,
+.card,
+.project-card,
+.value-card,
+.footer {
+  transition: all 0.8s ease;
+}
+
+/* override global button style for theme toggle */
+.theme-button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: 1.8rem;
+  line-height: 1;
+}
