@@ -19,10 +19,10 @@ themeButton.addEventListener("click", () => {
   }, 500);
 
   if (document.body.classList.contains("dark")) {
-    themeIcon.textContent = "🌙";
+    themeIcon.textContent = "☀️";
     themeLabel.textContent = "click sun to go to light mode";
   } else {
-    themeIcon.textContent = "☀️";
+    themeIcon.textContent = "🌙";
     themeLabel.textContent = "click moon to go to dark mode";
   }
 });
@@ -43,4 +43,5 @@ if (menuToggle) {
     });
   });
 }
+
 
