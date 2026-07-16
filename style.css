@@ -90,6 +90,24 @@ button:hover {
   transform: translateY(-2px);
 }
 
+/* Smaller 'Say Hello' button */
+#helloButton {
+  /* keep height consistent, set explicit width (length) */
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  width: 80px;
+  height: 36px;
+  min-width: unset;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* Center the Say Hello button */
+#helloButton {
+  display: block;
+  margin: 0.6rem auto 0;
+}
+
 /* ===== Hero ===== */
 .hero {
   text-align: center;
