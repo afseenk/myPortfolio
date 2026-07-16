@@ -27,3 +27,20 @@ themeButton.addEventListener("click", () => {
   }
 });
 
+// Mobile nav toggle
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.querySelector(".navbar");
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("nav-open");
+  });
+
+  // Close nav when a link is clicked (mobile)
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('nav-open');
+    });
+  });
+}
+
